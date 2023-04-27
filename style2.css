@@ -1,0 +1,64 @@
+html {
+    font-size: 10px;
+}
+
+div.overflaw {
+    border: 2px solid black;
+    width: 180px;
+    font-size: 5rem;
+    overflow-x: auto; /* (스크롤 오토) */
+    /*overflow-x: scroll; (방향지정 O) */
+    /*overflow: scroll; (방향지정 X) */
+    /*overflow: hidden;*/
+    color: #008000;
+}
+
+h1 {
+    font-size: 5rem;
+    font-style: italic;
+    font-weight: bold; /* 100 ~ 900 까지 수치있음 (영어 단어도 있음) */
+    text-decoration: underline;
+    /* text-decoration: none; (밑줄제거) */
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+.container1 {
+    border-width: 2px;
+    border-style: solid;
+    border-color: blue;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border-radius: 20px
+}
+/*  border-radius: 20px
+    background-color: yellow; (이렇게는 안됨) */
+
+p {
+    background-color: skyblue;
+}
+
+.container2 {
+    border-width: 2px;
+    border-style: solid;
+    border-color: blue;
+    width: 300px;
+    height: 300px;
+    background-image: url(1.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* 이미지 채우기 */
+    background-position: center; /* 이미지 칸 안에서 가운데 */
+    margin: 0 auto; /* 부모 block 요소의 width를 기준으로 자동 계산 */
+    text-align:center; /*부모 안에 있는 텍스트 가운데 */
+}
