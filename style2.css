@@ -47,6 +47,7 @@ a:visited {
 
 p {
     background-color: skyblue;
+    font-size: 30px;
 }
 
 .container2 {
@@ -61,4 +62,31 @@ p {
     background-position: center; /* 이미지 칸 안에서 가운데 */
     margin: 0 auto; /* 부모 block 요소의 width를 기준으로 자동 계산 */
     text-align:center; /*부모 안에 있는 텍스트 가운데 */
+}
+
+header::after {
+    clear: both; 
+    content:" ";
+    display: block; /* clarfix 기법을 헤더에 적용하면 밑의 요소를 막을 수 있다.*/  
+}
+.redblue {
+    border: 2px solid black;
+    margin: 0 auto;
+    width: 1400px;
+    height: 300px;
+}
+
+div.pink{
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    float: left; /* 마진이 없어짐 > 대응하기 위해 clear 이 나옴 */
+    background-color: pink;
+}
+div.blue{
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    clear: left /* both or left or right 딸려 올라가지 않고 그대로임(마진이 없어지진 않음) */
 }

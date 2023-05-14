@@ -1,0 +1,80 @@
+/*
+div {
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 0px 40px 0px 0px;
+}
+
+div:last-child {
+    margin: 0;
+}
+*/
+
+/*비효율적*/
+
+/*
+flex container {display:flex;} 를 선언한 부모요소
+flex item =flex container 의 자식요소 (배치를 원하는 요소)
+main axis = 가로 (raw) 배치의 주축; 세로(column)의 보조축
+cross axis = 세로(column)배치의 주축; 가로(raw) 배치의 보조축
+*/
+
+.container {
+    width : 1080px; /*이건 어떻게 사용하나요 */
+    display: flex;
+    justify-content: space-between; /*알아서 자식요소들이 펼쳐짐 */
+}
+
+.box1, .box2, .box3 {
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+.box4 {
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 50px;
+}
+
+.box5 {
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    position: absolute; /* body를 기준으로 위치를 움직임 (절대적으로 움직임)*/
+                        /* float 등의 관계 무시 */
+    left: 50px; /* 하지만 부모요소가 relative 이면 그에 따라 움직임 */
+}
+
+.box6 {
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    position: fixed; /* 브라우저 창을 기준으로 위치를 고정 */
+    bottom:0;
+    left:0; 
+}
+
+.box7 {
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    position: sticky; /* 스크롤을 내렸을 때 top 에서 멈춤 */
+    bottom:0;
+}
+
+/* container Grid system이 적용될 영역
+row 행, 가로, 부분. floot 된 column
+요소가 흘러넘치지 않게 하는 역할
+column 열, 세로 부분, 요소의 위치 결정에서 실질적인 역할 수행
+gutter row 와 column 사이의 간격 */
+
+p {
+    font-size: 40px;
+    font-family: 'Black Han Sans', sans-serif;
+    color: rgb(182, 11, 85);
+}
